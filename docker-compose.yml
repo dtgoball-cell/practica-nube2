@@ -11,7 +11,7 @@ services:
       DB_NAME: empresa_cloud
     depends_on:
       db:
-        codition: service_healthy
+        condition: service_healthy
     healthcheck:
       test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:3000 || exit 1"]
       interval: 10s
